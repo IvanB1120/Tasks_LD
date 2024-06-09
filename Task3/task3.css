@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F3EDE5;
+    height: 100vh;
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.swiper {
+    width: 100%;
+    height: 75%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+  @media only screen and (min-width: 1px) and (max-width: 576px){
+    .swiper-button-prev {
+        display: none;
+    }
+}
+

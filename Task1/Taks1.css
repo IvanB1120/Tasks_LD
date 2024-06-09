@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: 1000ms;
+}
+.container.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+img {
+    height: 100%;
+    width: 50vw;
+    object-fit: fill;
+}
+
+.image--container {
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+}
+
+.text--container {
+    width: 50vw;
+    height: 100vh;
+    background-color: #E3CFCF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text--headline {
+    font-size: 32px;
+}
+
+.text--regular {
+    font-size: 18px;
+    padding: 0 12%;
+    display: none;
+}
+
+button {
+  font-size: 14px;
+  padding: 10px 30px;
+  background-color: transparent;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+header {
+    height: 200vh;
+    width: 100vw;
+}
+footer {
+    height: 200vh;
+    width: 100vw;
+}
+
+@keyframes increaseFontSize {
+    from {
+        font-size: 0px;
+    }
+    to {
+        font-size: 18px;
+    }
+}
+
+@keyframes decreaseFontSize {
+    from {
+        font-size: 18px;
+    }
+    to {
+        font-size: 0px;
+        display: none;
+    }
+}
+
+.animate-fade-in {
+    animation: increaseFontSize 1s ease-in-out forwards;
+    display: block !important;
+}
+
+.animate-fade-out {
+    animation: decreaseFontSize 1s ease-in-out forwards;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1092px){
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .image--container {
+        width: 100vw;
+    }
+    .text--container {
+        width: 100vw;
+    }
+    img {
+        width: 100vw;
+        object-fit: fill;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .image--container {
+        width: 100vw;
+    }
+    .text--container {
+        width: 100vw;
+    }
+    img {
+        width: 100vw;
+        object-fit: fill;
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 576px){
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+    .image--container {
+        width: 100vw;
+        height: 40vh;
+    }
+    .text--container {
+        width: 100vw;
+        height: 60vh;
+    }
+    img {
+        width: 100vw;
+        object-fit: fill;
+    }
+    @keyframes increaseFontSize {
+        from {
+            font-size: 0px;
+        }
+        to {
+            font-size: 16px;
+        }
+    }
+    @keyframes decreaseFontSize {
+        from {
+            font-size: 16px;
+        }
+        to {
+            font-size: 0px;
+            display: none;
+        }
+    }
+    .text--headline {
+        font-size: 24px;
+    }
+    .text--regular {
+        padding: 0 3%;
+    }
+    button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+}

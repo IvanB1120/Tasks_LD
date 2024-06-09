@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="task3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./picture1.jpg"/></div>
+          <div class="swiper-slide"><img src="./picture2.jpg"/></div>
+          <div class="swiper-slide"><img src="./picture3.jpg"/></div>
+          <div class="swiper-slide"><img src="./picture1.jpg"/></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        350: {
+          slidesPerView: 1,
+          spaceBetween: 5,
+          navigation: {
+            prevEl: ".swiper-button-prev"
+          },
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 5
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 5
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 5
+
+        },}
+        });
+
+
+      </script>
+
+</body>
+</html>
